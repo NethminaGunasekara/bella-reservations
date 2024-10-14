@@ -46,35 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin_boat1.cs">
+    <Compile Include="Admin\boat_data.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="admin_boat1.Designer.cs">
-      <DependentUpon>admin_boat1.cs</DependentUpon>
+    <Compile Include="Admin\boat_data.Designer.cs">
+      <DependentUpon>boat_data.cs</DependentUpon>
     </Compile>
-    <Compile Include="admin_bus1.cs">
+    <Compile Include="Admin\bus_data.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="admin_bus1.Designer.cs">
-      <DependentUpon>admin_bus1.cs</DependentUpon>
+    <Compile Include="Admin\bus_data.Designer.cs">
+      <DependentUpon>bus_data.cs</DependentUpon>
     </Compile>
-    <Compile Include="admin_plane1.cs">
+    <Compile Include="Admin\plane_data.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="admin_plane1.Designer.cs">
-      <DependentUpon>admin_plane1.cs</DependentUpon>
+    <Compile Include="Admin\plane_data.Designer.cs">
+      <DependentUpon>plane_data.cs</DependentUpon>
     </Compile>
-    <Compile Include="admin_train1.cs">
+    <Compile Include="Admin\train_data.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="admin_train1.Designer.cs">
-      <DependentUpon>admin_train1.cs</DependentUpon>
+    <Compile Include="Admin\train_data.Designer.cs">
+      <DependentUpon>train_data.cs</DependentUpon>
     </Compile>
-    <Compile Include="login1.cs">
+    <Compile Include="Access\login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login1.Designer.cs">
-      <DependentUpon>login1.cs</DependentUpon>
+    <Compile Include="Access\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
@@ -82,35 +82,35 @@
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
-    <Compile Include="main_boat.cs">
+    <Compile Include="Reservation\boat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="main_boat.Designer.cs">
-      <DependentUpon>main_boat.cs</DependentUpon>
+    <Compile Include="Reservation\boat.Designer.cs">
+      <DependentUpon>boat.cs</DependentUpon>
     </Compile>
-    <Compile Include="main_bus.cs">
+    <Compile Include="Reservation\bus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="main_bus.Designer.cs">
-      <DependentUpon>main_bus.cs</DependentUpon>
+    <Compile Include="Reservation\bus.Designer.cs">
+      <DependentUpon>bus.cs</DependentUpon>
     </Compile>
-    <Compile Include="main_plane.cs">
+    <Compile Include="Reservation\plane.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="main_plane.Designer.cs">
-      <DependentUpon>main_plane.cs</DependentUpon>
+    <Compile Include="Reservation\plane.Designer.cs">
+      <DependentUpon>plane.cs</DependentUpon>
     </Compile>
-    <Compile Include="main_train.cs">
+    <Compile Include="Reservation\train.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="main_train.Designer.cs">
-      <DependentUpon>main_train.cs</DependentUpon>
+    <Compile Include="Reservation\train.Designer.cs">
+      <DependentUpon>train.cs</DependentUpon>
     </Compile>
-    <Compile Include="profile1.cs">
+    <Compile Include="profile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="profile1.Designer.cs">
-      <DependentUpon>profile1.cs</DependentUpon>
+    <Compile Include="profile.Designer.cs">
+      <DependentUpon>profile.cs</DependentUpon>
     </Compile>
     <Compile Include="receipt.cs">
       <SubType>Form</SubType>
@@ -120,74 +120,74 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="register.cs">
+    <Compile Include="Access\register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="register.Designer.cs">
+    <Compile Include="Access\register.Designer.cs">
       <DependentUpon>register.cs</DependentUpon>
     </Compile>
-    <Compile Include="seat_boat1.cs">
+    <Compile Include="Reservation\SeatConfiguration\boat_seats.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="seat_boat1.Designer.cs">
-      <DependentUpon>seat_boat1.cs</DependentUpon>
+    <Compile Include="Reservation\SeatConfiguration\boat_seats.Designer.cs">
+      <DependentUpon>boat_seats.cs</DependentUpon>
     </Compile>
-    <Compile Include="seat_bus1.cs">
+    <Compile Include="Reservation\SeatConfiguration\bus_seats.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="seat_bus1.Designer.cs">
-      <DependentUpon>seat_bus1.cs</DependentUpon>
+    <Compile Include="Reservation\SeatConfiguration\bus_seats.Designer.cs">
+      <DependentUpon>bus_seats.cs</DependentUpon>
     </Compile>
-    <Compile Include="seat_plane1.cs">
+    <Compile Include="Reservation\SeatConfiguration\plane_seats.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="seat_plane1.Designer.cs">
-      <DependentUpon>seat_plane1.cs</DependentUpon>
+    <Compile Include="Reservation\SeatConfiguration\plane_seats.Designer.cs">
+      <DependentUpon>plane_seats.cs</DependentUpon>
     </Compile>
-    <Compile Include="seat_train1.cs">
+    <Compile Include="Reservation\SeatConfiguration\train_seats.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="seat_train1.Designer.cs">
-      <DependentUpon>seat_train1.cs</DependentUpon>
+    <Compile Include="Reservation\SeatConfiguration\train_seats.Designer.cs">
+      <DependentUpon>train_seats.cs</DependentUpon>
     </Compile>
-    <Compile Include="selection2.cs">
+    <Compile Include="selection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="selection2.Designer.cs">
-      <DependentUpon>selection2.cs</DependentUpon>
+    <Compile Include="selection.Designer.cs">
+      <DependentUpon>selection.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="admin_boat1.resx">
-      <DependentUpon>admin_boat1.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\boat_data.resx">
+      <DependentUpon>boat_data.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="admin_bus1.resx">
-      <DependentUpon>admin_bus1.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\bus_data.resx">
+      <DependentUpon>bus_data.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="admin_plane1.resx">
-      <DependentUpon>admin_plane1.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\plane_data.resx">
+      <DependentUpon>plane_data.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="admin_train1.resx">
-      <DependentUpon>admin_train1.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\train_data.resx">
+      <DependentUpon>train_data.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login1.resx">
-      <DependentUpon>login1.cs</DependentUpon>
+    <EmbeddedResource Include="Access\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="main_boat.resx">
-      <DependentUpon>main_boat.cs</DependentUpon>
+    <EmbeddedResource Include="Reservation\boat.resx">
+      <DependentUpon>boat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="main_bus.resx">
-      <DependentUpon>main_bus.cs</DependentUpon>
+    <EmbeddedResource Include="Reservation\bus.resx">
+      <DependentUpon>bus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="main_plane.resx">
-      <DependentUpon>main_plane.cs</DependentUpon>
+    <EmbeddedResource Include="Reservation\plane.resx">
+      <DependentUpon>plane.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="main_train.resx">
-      <DependentUpon>main_train.cs</DependentUpon>
+    <EmbeddedResource Include="Reservation\train.resx">
+      <DependentUpon>train.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="profile1.resx">
-      <DependentUpon>profile1.cs</DependentUpon>
+    <EmbeddedResource Include="profile.resx">
+      <DependentUpon>profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="receipt.resx">
       <DependentUpon>receipt.cs</DependentUpon>
@@ -201,23 +201,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="register.resx">
+    <EmbeddedResource Include="Access\register.resx">
       <DependentUpon>register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="seat_boat1.resx">
-      <DependentUpon>seat_boat1.cs</DependentUpon>
+    <EmbeddedResource Include="Reservation\SeatConfiguration\boat_seats.resx">
+      <DependentUpon>boat_seats.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="seat_bus1.resx">
-      <DependentUpon>seat_bus1.cs</DependentUpon>
+    <EmbeddedResource Include="Reservation\SeatConfiguration\bus_seats.resx">
+      <DependentUpon>bus_seats.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="seat_plane1.resx">
-      <DependentUpon>seat_plane1.cs</DependentUpon>
+    <EmbeddedResource Include="Reservation\SeatConfiguration\plane_seats.resx">
+      <DependentUpon>plane_seats.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="seat_train1.resx">
-      <DependentUpon>seat_train1.cs</DependentUpon>
+    <EmbeddedResource Include="Reservation\SeatConfiguration\train_seats.resx">
+      <DependentUpon>train_seats.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="selection2.resx">
-      <DependentUpon>selection2.cs</DependentUpon>
+    <EmbeddedResource Include="selection.resx">
+      <DependentUpon>selection.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -229,5 +229,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
