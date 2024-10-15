@@ -13,9 +13,12 @@ namespace BellaReservations
 {
     public partial class boat : Form
     {
-        public boat()
+        Form PreviousForm;
+
+        public boat(Form previousForm)
         {
             InitializeComponent();
+            PreviousForm = previousForm;
         }
         private void tableLayoutPanel3_Paint_1(object sender, PaintEventArgs e)
         {
@@ -53,6 +56,15 @@ namespace BellaReservations
                     g.DrawPath(pen, path);
                 }
             }
+        }
+
+        // When the previous form button is clicked
+        private void PreviousFormButton_Click(object sender, EventArgs e)
+        {
+            // Return the user to previous form
+            PreviousForm.Show();
+            PreviousForm.FormClosing += delegate { Application.Exit(); };
+            this.Hide();
         }
     }
 }

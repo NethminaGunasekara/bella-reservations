@@ -1,6 +1,6 @@
 ﻿namespace BellaReservations
 {
-    partial class selection2
+    partial class selection
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(selection2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(selection));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.PreviousFormButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ProfileButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -48,10 +48,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.ButtonTransportModeBus = new System.Windows.Forms.Button();
+            this.ButtonTransportModeTrain = new System.Windows.Forms.Button();
+            this.ButtonTransportModeShip = new System.Windows.Forms.Button();
+            this.ButtonTransportModePlane = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -81,15 +81,16 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1262, 673);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(946, 547);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -97,35 +98,38 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.tableLayoutPanel1.SetColumnSpan(this.panel4, 2);
-            this.panel4.Controls.Add(this.button6);
+            this.panel4.Controls.Add(this.PreviousFormButton);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 620);
+            this.panel4.Location = new System.Drawing.Point(0, 505);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1262, 53);
+            this.panel4.Size = new System.Drawing.Size(946, 42);
             this.panel4.TabIndex = 16;
             // 
-            // button6
+            // PreviousFormButton
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.Font = new System.Drawing.Font("Audiowide", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(6, 6);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 40);
-            this.button6.TabIndex = 14;
-            this.button6.UseVisualStyleBackColor = true;
+            this.PreviousFormButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.PreviousFormButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PreviousFormButton.BackgroundImage")));
+            this.PreviousFormButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PreviousFormButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PreviousFormButton.Location = new System.Drawing.Point(4, 4);
+            this.PreviousFormButton.Margin = new System.Windows.Forms.Padding(2);
+            this.PreviousFormButton.Name = "PreviousFormButton";
+            this.PreviousFormButton.Size = new System.Drawing.Size(75, 32);
+            this.PreviousFormButton.TabIndex = 14;
+            this.PreviousFormButton.UseVisualStyleBackColor = true;
+            this.PreviousFormButton.Click += new System.EventHandler(this.PreviousFormButton_Click);
             // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(894, 25);
+            this.label8.Location = new System.Drawing.Point(670, 19);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(344, 16);
+            this.label8.Size = new System.Drawing.Size(278, 13);
             this.label8.TabIndex = 1;
             this.label8.Text = "Copyright © 2024 Bella Reservation. All Rights Reserved.";
             // 
@@ -139,40 +143,40 @@
             this.tableLayoutPanel1.SetColumnSpan(this.label1, 2);
             this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 60);
+            this.label1.Location = new System.Drawing.Point(0, 49);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1262, 140);
+            this.label1.Size = new System.Drawing.Size(946, 114);
             this.label1.TabIndex = 12;
             this.label1.Text = "Select Your Transport Mode";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Navy;
             this.tableLayoutPanel1.SetColumnSpan(this.panel2, 2);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.ProfileButton);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1262, 60);
+            this.panel2.Size = new System.Drawing.Size(946, 49);
             this.panel2.TabIndex = 3;
             // 
-            // button2
+            // ProfileButton
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.Navy;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(1199, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 50);
-            this.button2.TabIndex = 6;
-            this.button2.UseVisualStyleBackColor = false;
+            this.ProfileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProfileButton.BackColor = System.Drawing.Color.Navy;
+            this.ProfileButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ProfileButton.BackgroundImage")));
+            this.ProfileButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ProfileButton.Location = new System.Drawing.Point(899, 4);
+            this.ProfileButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ProfileButton.Name = "ProfileButton";
+            this.ProfileButton.Size = new System.Drawing.Size(45, 41);
+            this.ProfileButton.TabIndex = 6;
+            this.ProfileButton.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -180,9 +184,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Pacifico", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(429, 3);
+            this.label4.Location = new System.Drawing.Point(322, 2);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(401, 54);
+            this.label4.Size = new System.Drawing.Size(318, 43);
             this.label4.TabIndex = 5;
             this.label4.Text = "BELLA RESERVATIONS";
             // 
@@ -193,9 +198,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(45, 41);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -209,11 +215,12 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 203);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 165);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1256, 134);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(942, 110);
             this.tableLayoutPanel2.TabIndex = 13;
             // 
             // panel1
@@ -221,10 +228,10 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.tableLayoutPanel5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(125, 0);
+            this.panel1.Location = new System.Drawing.Point(94, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1004, 134);
+            this.panel1.Size = new System.Drawing.Size(753, 110);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -250,7 +257,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1004, 134);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(753, 110);
             this.tableLayoutPanel5.TabIndex = 1;
             this.tableLayoutPanel5.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel5_Paint);
             // 
@@ -260,10 +267,10 @@
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Location = new System.Drawing.Point(120, 33);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(20);
+            this.pictureBox2.Location = new System.Drawing.Point(90, 27);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(15, 16, 15, 16);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(160, 67);
+            this.pictureBox2.Size = new System.Drawing.Size(120, 56);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
@@ -275,10 +282,10 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(320, 33);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(20);
+            this.pictureBox3.Location = new System.Drawing.Point(240, 27);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(15, 16, 15, 16);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(160, 67);
+            this.pictureBox3.Size = new System.Drawing.Size(120, 56);
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
@@ -288,10 +295,10 @@
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox4.Location = new System.Drawing.Point(520, 33);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(20);
+            this.pictureBox4.Location = new System.Drawing.Point(390, 27);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(15, 16, 15, 16);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(160, 67);
+            this.pictureBox4.Size = new System.Drawing.Size(120, 56);
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
             // 
@@ -301,10 +308,10 @@
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox5.Location = new System.Drawing.Point(720, 33);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(20);
+            this.pictureBox5.Location = new System.Drawing.Point(540, 27);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(15, 16, 15, 16);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(160, 67);
+            this.pictureBox5.Size = new System.Drawing.Size(120, 56);
             this.pictureBox5.TabIndex = 3;
             this.pictureBox5.TabStop = false;
             // 
@@ -316,9 +323,10 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 480);
+            this.label2.Location = new System.Drawing.Point(2, 391);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1256, 140);
+            this.label2.Size = new System.Drawing.Size(942, 114);
             this.label2.TabIndex = 14;
             this.label2.Text = resources.GetString("label2.Text");
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -333,12 +341,13 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 343);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(2, 279);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1256, 134);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(942, 110);
             this.tableLayoutPanel4.TabIndex = 15;
             // 
             // tableLayoutPanel3
@@ -351,89 +360,95 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.Controls.Add(this.button1, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.button3, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.button4, 3, 1);
-            this.tableLayoutPanel3.Controls.Add(this.button5, 4, 1);
+            this.tableLayoutPanel3.Controls.Add(this.ButtonTransportModeBus, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.ButtonTransportModeTrain, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.ButtonTransportModeShip, 3, 1);
+            this.tableLayoutPanel3.Controls.Add(this.ButtonTransportModePlane, 4, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(125, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(94, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1004, 107);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(753, 88);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // button1
+            // ButtonTransportModeBus
             // 
-            this.button1.BackColor = System.Drawing.Color.Navy;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(130, 30);
-            this.button1.Margin = new System.Windows.Forms.Padding(30, 20, 30, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 45);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Bus";
-            this.button1.UseVisualStyleBackColor = false;
+            this.ButtonTransportModeBus.BackColor = System.Drawing.Color.Navy;
+            this.ButtonTransportModeBus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ButtonTransportModeBus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ButtonTransportModeBus.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonTransportModeBus.ForeColor = System.Drawing.Color.White;
+            this.ButtonTransportModeBus.Location = new System.Drawing.Point(97, 24);
+            this.ButtonTransportModeBus.Margin = new System.Windows.Forms.Padding(22, 16, 22, 16);
+            this.ButtonTransportModeBus.Name = "ButtonTransportModeBus";
+            this.ButtonTransportModeBus.Size = new System.Drawing.Size(106, 38);
+            this.ButtonTransportModeBus.TabIndex = 0;
+            this.ButtonTransportModeBus.Text = "Bus";
+            this.ButtonTransportModeBus.UseVisualStyleBackColor = false;
+            this.ButtonTransportModeBus.Click += new System.EventHandler(this.ButtonTransportModeBus_Click);
             // 
-            // button3
+            // ButtonTransportModeTrain
             // 
-            this.button3.BackColor = System.Drawing.Color.Navy;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(330, 30);
-            this.button3.Margin = new System.Windows.Forms.Padding(30, 20, 30, 20);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 45);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Train";
-            this.button3.UseVisualStyleBackColor = false;
+            this.ButtonTransportModeTrain.BackColor = System.Drawing.Color.Navy;
+            this.ButtonTransportModeTrain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ButtonTransportModeTrain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ButtonTransportModeTrain.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonTransportModeTrain.ForeColor = System.Drawing.Color.White;
+            this.ButtonTransportModeTrain.Location = new System.Drawing.Point(247, 24);
+            this.ButtonTransportModeTrain.Margin = new System.Windows.Forms.Padding(22, 16, 22, 16);
+            this.ButtonTransportModeTrain.Name = "ButtonTransportModeTrain";
+            this.ButtonTransportModeTrain.Size = new System.Drawing.Size(106, 38);
+            this.ButtonTransportModeTrain.TabIndex = 1;
+            this.ButtonTransportModeTrain.Text = "Train";
+            this.ButtonTransportModeTrain.UseVisualStyleBackColor = false;
+            this.ButtonTransportModeTrain.Click += new System.EventHandler(this.ButtonTransportModeTrain_Click);
             // 
-            // button4
+            // ButtonTransportModeShip
             // 
-            this.button4.BackColor = System.Drawing.Color.Navy;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(530, 30);
-            this.button4.Margin = new System.Windows.Forms.Padding(30, 20, 30, 20);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 45);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Ship";
-            this.button4.UseVisualStyleBackColor = false;
+            this.ButtonTransportModeShip.BackColor = System.Drawing.Color.Navy;
+            this.ButtonTransportModeShip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ButtonTransportModeShip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ButtonTransportModeShip.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonTransportModeShip.ForeColor = System.Drawing.Color.White;
+            this.ButtonTransportModeShip.Location = new System.Drawing.Point(397, 24);
+            this.ButtonTransportModeShip.Margin = new System.Windows.Forms.Padding(22, 16, 22, 16);
+            this.ButtonTransportModeShip.Name = "ButtonTransportModeShip";
+            this.ButtonTransportModeShip.Size = new System.Drawing.Size(106, 38);
+            this.ButtonTransportModeShip.TabIndex = 2;
+            this.ButtonTransportModeShip.Text = "Ship";
+            this.ButtonTransportModeShip.UseVisualStyleBackColor = false;
+            this.ButtonTransportModeShip.Click += new System.EventHandler(this.ButtonTransportModeShip_Click);
             // 
-            // button5
+            // ButtonTransportModePlane
             // 
-            this.button5.BackColor = System.Drawing.Color.Navy;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(730, 30);
-            this.button5.Margin = new System.Windows.Forms.Padding(30, 20, 30, 20);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(140, 45);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Plane";
-            this.button5.UseVisualStyleBackColor = false;
+            this.ButtonTransportModePlane.BackColor = System.Drawing.Color.Navy;
+            this.ButtonTransportModePlane.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ButtonTransportModePlane.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ButtonTransportModePlane.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonTransportModePlane.ForeColor = System.Drawing.Color.White;
+            this.ButtonTransportModePlane.Location = new System.Drawing.Point(547, 24);
+            this.ButtonTransportModePlane.Margin = new System.Windows.Forms.Padding(22, 16, 22, 16);
+            this.ButtonTransportModePlane.Name = "ButtonTransportModePlane";
+            this.ButtonTransportModePlane.Size = new System.Drawing.Size(106, 38);
+            this.ButtonTransportModePlane.TabIndex = 3;
+            this.ButtonTransportModePlane.Text = "Plane";
+            this.ButtonTransportModePlane.UseVisualStyleBackColor = false;
+            this.ButtonTransportModePlane.Click += new System.EventHandler(this.ButtonTransportModePlane_Click);
             // 
-            // selection2
+            // selection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(946, 547);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "selection2";
-            this.Text = "selection2";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "selection";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Select Your Transport Mode - Bella Reservations";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -458,16 +473,16 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ProfileButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button ButtonTransportModeBus;
+        private System.Windows.Forms.Button ButtonTransportModeTrain;
+        private System.Windows.Forms.Button ButtonTransportModeShip;
+        private System.Windows.Forms.Button ButtonTransportModePlane;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Panel panel1;
@@ -477,7 +492,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button PreviousFormButton;
         private System.Windows.Forms.Label label8;
     }
 }

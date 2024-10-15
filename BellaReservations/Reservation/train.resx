@@ -2296,7 +2296,7 @@ and automatic notifications to keep users updated.</value>
         FvUWxFFKKIkaiiih6AUUUUkBRRRQAUbxEUUAGI/UaKKBLRNJbFFKQMUUUUYhRRRQAUUUUAFFFFEB/9k=
 </value>
   </data>
-  <data name="button6.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PreviousFormButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAABY9JREFUeF7t
         3e1PU1cAx3H2dmwGFdqSAKUtTy2IsvgH7PX+gv0RjSbLXuwFmTfZ2OaigoBS0EweB0OeigPc5lzMHiK6

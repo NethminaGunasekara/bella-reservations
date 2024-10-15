@@ -1,21 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BellaReservations
 {
     public partial class bus_data : Form
     {
-        public bus_data()
+        Form PreviousForm;
+
+        public bus_data(Form previousForm)
         {
             InitializeComponent();
+
+            PreviousForm = previousForm;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -133,6 +131,20 @@ namespace BellaReservations
                 // Draw the white border around the panel
                 e.Graphics.DrawPath(whitePen, path);
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        // When the previous form button is clicked
+        private void PreviousFormButton_Click(object sender, EventArgs e)
+        {
+            // Return the user to previous form
+            PreviousForm.Show();
+            PreviousForm.FormClosing += delegate { Application.Exit(); };
+            this.Hide();
         }
     }
 }

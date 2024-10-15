@@ -5,18 +5,24 @@ using System.Windows.Forms;
 
 namespace BellaReservations
 {
-    public partial class selection2 : Form
+    public partial class selection : Form
     {
         // Step 01: First create a variable for storing the current form
         Form PreviousForm;
 
         // Step 2: Add the variable we created as a parameter
-        public selection2(Form previousForm)
+        public selection(Form previousForm)
         {
             InitializeComponent();
 
             // Step 3: Store the previous form within the variable we created
             PreviousForm = previousForm;
+
+            // Edit the form title if the logged user is an admin
+            if (main.UserRole == "ADMIN")
+            {
+                Text = "Edit Details About A Transport Mode - Bella Reservations";
+            }
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -91,19 +97,123 @@ namespace BellaReservations
             panel.Region = new Region(path);
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        // When the previous form button is clicked
+        private void PreviousFormButton_Click(object sender, EventArgs e)
         {
+            // Return the user to previous form
             PreviousForm.Show();
-
-            // Close the application when destination form closes
             PreviousForm.FormClosing += delegate { Application.Exit(); };
-
             this.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void ButtonTransportModeBus_Click(object sender, EventArgs e)
         {
+            // If the button is clicked by an admin
+            if (main.UserRole == "ADMIN")
+            {
+                // Show the bus data editing form
+                bus_data BusDataForm = new bus_data(this);
+                BusDataForm.FormClosing += delegate { Application.Exit(); };
 
+                BusDataForm.Show(); // Show the destination form
+
+                // Hide the current form
+                this.Hide();
+            }
+            else
+            {
+                // If the button is clicked by a user
+                bus BusReservation = new bus(this);
+                BusReservation.FormClosing += delegate { Application.Exit(); };
+
+                BusReservation.Show(); // Show the destination form
+
+                // Hide the current form
+                this.Hide();
+            }
         }
+
+        private void ButtonTransportModeTrain_Click(object sender, EventArgs e)
+        {
+            // If the button is clicked by an admin
+            if (main.UserRole == "ADMIN")
+            {
+                // Show the train data editing form
+                train_data TrainDataForm = new train_data(this);
+                TrainDataForm.FormClosing += delegate { Application.Exit(); };
+
+                TrainDataForm.Show(); // Show the destination form
+
+                // Hide the current form
+                this.Hide();
+            }
+            else
+            {
+                // If the button is clicked by a user
+                train TrainReservation = new train(this);
+                TrainReservation.FormClosing += delegate { Application.Exit(); };
+
+                TrainReservation.Show(); // Show the destination form
+
+                // Hide the current form
+                this.Hide();
+            }
+        }
+
+        private void ButtonTransportModeShip_Click(object sender, EventArgs e)
+        {
+            // If the button is clicked by an admin
+            if (main.UserRole == "ADMIN")
+            {
+                // Show the ship data editing form
+                boat_data ShipDataForm = new boat_data(this);
+                ShipDataForm.FormClosing += delegate { Application.Exit(); };
+
+                ShipDataForm.Show(); // Show the destination form
+
+                // Hide the current form
+                this.Hide();
+            }
+            else
+            {
+                // If the button is clicked by a user
+                boat ShipReservation = new boat(this);
+                ShipReservation.FormClosing += delegate { Application.Exit(); };
+
+                ShipReservation.Show(); // Show the destination form
+
+                // Hide the current form
+                this.Hide();
+            }
+        }
+
+        private void ButtonTransportModePlane_Click(object sender, EventArgs e)
+        {
+            // If the button is clicked by an admin
+            if (main.UserRole == "ADMIN")
+            {
+                // Show the plane data editing form
+                plane_data PlaneDataForm = new plane_data(this);
+                PlaneDataForm.FormClosing += delegate { Application.Exit(); };
+
+                PlaneDataForm.Show(); // Show the destination form
+
+                // Hide the current form
+                this.Hide();
+            }
+            else
+            {
+                // If the button is clicked by a user
+                plane PlaneReservation = new plane(this);
+                PlaneReservation.FormClosing += delegate { Application.Exit(); };
+
+                PlaneReservation.Show(); // Show the destination form
+
+                // Hide the current form
+                this.Hide();
+            }
+        }
+
+
     }
 }

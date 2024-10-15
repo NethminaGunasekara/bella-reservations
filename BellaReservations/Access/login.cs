@@ -111,6 +111,16 @@ namespace BellaReservations
                             string adminName = reader.GetString(1); // name
                             main.UserRole = "ADMIN";
                             MessageBox.Show($"Login successful! Welcome, {adminName} (Admin).");
+
+                            // Initialize the transport mode selection form
+                            selection selection = new selection(this);
+
+                            // Show the transport mode selection form
+                            selection.Show();
+
+                            // Hide the current form
+                            this.Hide();
+
                             return;
                         }
                     }
@@ -134,6 +144,16 @@ namespace BellaReservations
                             string customerName = reader.GetString(1); // name
                             main.UserRole = "CUSTOMER";
                             MessageBox.Show($"Login successful! Welcome, {customerName} (Customer).");
+
+                            // Initialize the transport mode selection form
+                            selection selection = new selection(this);
+
+                            // Show the transport mode selection form
+                            selection.Show();
+
+                            // Hide the current form
+                            this.Hide();
+
                             return;
                         }
                     }
@@ -144,13 +164,12 @@ namespace BellaReservations
             MessageBox.Show("Login failed! Incorrect username or password.");
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        // When the previous form button is clicked
+        private void PreviousFormButton_Click(object sender, EventArgs e)
         {
+            // Return the user to previous form
             PreviousForm.Show();
-
-            // Close the application when destination form closes
             PreviousForm.FormClosing += delegate { Application.Exit(); };
-
             this.Hide();
         }
     }

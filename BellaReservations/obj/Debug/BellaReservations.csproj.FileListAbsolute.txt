@@ -99,7 +99,6 @@ C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.main.resources
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.boat.resources
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.bus.resources
-C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.main_plane.resources
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.train.resources
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.profile.resources
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.Form4.resources
@@ -109,8 +108,9 @@ C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.bus_seats.resources
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.plane_seats.resources
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.train_seats.resources
-C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.selection2.resources
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.csproj.GenerateResource.cache
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.csproj.CoreCompileInputs.cache
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.exe
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.pdb
+C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.plane.resources
+C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.selection.resources

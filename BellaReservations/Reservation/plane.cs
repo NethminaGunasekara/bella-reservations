@@ -11,11 +11,14 @@ using System.Windows.Forms;
 
 namespace BellaReservations
 {
-    public partial class main_plane : Form
+    public partial class plane : Form
     {
-        public main_plane()
+        Form PreviousForm;
+
+        public plane(Form previousForm)
         {
             InitializeComponent();
+            PreviousForm = previousForm;
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,6 +66,15 @@ namespace BellaReservations
                     g.DrawPath(pen, path);
                 }
             }
+        }
+
+        // When the previous form button is clicked
+        private void PreviousFormButton_Click(object sender, EventArgs e)
+        {
+            // Return the user to previous form
+            PreviousForm.Show();
+            PreviousForm.FormClosing += delegate { Application.Exit(); };
+            this.Hide();
         }
     }
 }

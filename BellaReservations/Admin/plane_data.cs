@@ -1,21 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BellaReservations
 {
     public partial class plane_data : Form
     {
-        public plane_data()
+        Form PreviousForm;
+
+        public plane_data(Form previousForm)
         {
             InitializeComponent();
+
+            PreviousForm = previousForm;
         }
         private void label1_Click_1(object sender, EventArgs e)
         {
@@ -133,6 +131,20 @@ namespace BellaReservations
         private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void plane_data_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        // When the previous form button is clicked
+        private void PreviousFormButton_Click(object sender, EventArgs e)
+        {
+            // Return the user to previous form
+            PreviousForm.Show();
+            PreviousForm.FormClosing += delegate { Application.Exit(); };
+            this.Hide();
         }
     }
 }
