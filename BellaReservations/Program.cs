@@ -13,7 +13,7 @@ namespace BellaReservations
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new bus(new Form()));
+            Application.Run(new main());
         }
     }
 }

@@ -112,10 +112,10 @@
     <Compile Include="profile.Designer.cs">
       <DependentUpon>profile.cs</DependentUpon>
     </Compile>
-    <Compile Include="receipt.cs">
+    <Compile Include="Reservation\Receipt\receipt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="receipt.Designer.cs">
+    <Compile Include="Reservation\Receipt\receipt.Designer.cs">
       <DependentUpon>receipt.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -189,7 +189,7 @@
     <EmbeddedResource Include="profile.resx">
       <DependentUpon>profile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="receipt.resx">
+    <EmbeddedResource Include="Reservation\Receipt\receipt.resx">
       <DependentUpon>receipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

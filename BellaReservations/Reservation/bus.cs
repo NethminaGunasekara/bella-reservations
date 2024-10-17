@@ -9,6 +9,7 @@ namespace BellaReservations
 {
     public partial class bus : Form
     {
+        // Property to store the previous form, which we later refer to switch back
         Form PreviousForm;
 
         public bus(Form previousForm)
@@ -56,25 +57,6 @@ namespace BellaReservations
                 {
                     g.DrawPath(pen, path);
                 }
-            }
-        }
-
-        // When the previous form button is clicked
-        private void PreviousFormButton_Click(object sender, EventArgs e)
-        {
-            // Return the user to previous form
-            PreviousForm.Show();
-            PreviousForm.FormClosing += delegate { Application.Exit(); };
-            this.Hide();
-        }
-
-        // Method to execute when the confirm reservation button is clicked
-        private void ConfirmReservationButton_Click(object sender, EventArgs e)
-        {
-            // If any of the combo-boxes still containing their initial names, display an error message
-            if(DepartingStationComboBox.Text == "Departing Station" || DestinationStationComboBox.Text == "Destination Station" || DateComboBox.Text == "Date" || TimeComboBox.Text == "Time")
-            {
-                MessageBox.Show("Please fill out all values before continue.");
             }
         }
 
@@ -313,6 +295,90 @@ namespace BellaReservations
             catch (SqlException error)
             {
                 Console.WriteLine("Database connection error!");
+            }
+        }
+
+        // Method attached to the form to run when the previous form button is clicked
+        private void PreviousFormButton_Click(object sender, EventArgs e)
+        {
+            // Return the user to previous form
+            PreviousForm.Show();
+            PreviousForm.FormClosing += delegate { Application.Exit(); };
+            this.Hide();
+        }
+
+        // Method attached to the form to run when the confirm reservation button is clicked
+        private void ConfirmReservationButton_Click(object sender, EventArgs e)
+        {
+            // If any of the combo-boxes still containing their initial names, display an error message
+            if (DepartingStationComboBox.Text == "Departing Station" || DestinationStationComboBox.Text == "Destination Station" || DateComboBox.Text == "Date" || TimeComboBox.Text == "Time")
+            {
+                MessageBox.Show("Please fill out all values before continue.");
+            }
+
+            // If all required options are selected
+            else
+            {
+                // Retrieve the bus_id of the first match, where departing station, destination station,
+                // date, and time of the bus selected by the user matches. Then continue to the bus seats
+                // selection page id any record is found
+
+                // SQL Query: Retrieve the bus_id of the first match based on the user's selections
+                // The reason to enclose the date and time column names using square brackets is
+                // because they're SQL keywords, and we need to use them here as column names
+                string query = $@"SELECT TOP 1 bus_id 
+                                    FROM bus_data 
+                                        WHERE departing_station = '{DepartingStationComboBox.Text}' 
+                                        AND destination_station = '{DestinationStationComboBox.Text}' 
+                                        AND [date] = '{DateComboBox.Text}' 
+                                        AND [time] = '{TimeComboBox.Text}'";
+
+                try
+                {
+                    // Initialize SQL connection
+                    using (SqlConnection conn = new SqlConnection(main.ConnectionString))
+                    {
+                        // Open the database connection
+                        conn.Open();
+
+                        // Prepare and execute the SQL command
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            // Execute the command and retrieve the first result
+                            object result = cmd.ExecuteScalar();
+
+                            // If any row satisfies the query is found
+                            if (result != null)
+                            {
+                                int busId = Convert.ToInt32(result); // Get the bus_id
+
+                                // Proceed to the seat selection page
+                                bus_seats SeatSelectionForm = new bus_seats(
+                                    busId: busId,
+                                    previousForm: this,
+                                    startingPoint: DepartingStationComboBox.Text,
+                                    endPoint: DestinationStationComboBox.Text,
+                                    dateTime: $"{DateComboBox.Text} at {DateTime.Parse(TimeComboBox.Text).ToString("hh:mm tt")}");
+
+                                SeatSelectionForm.FormClosing += delegate { Application.Exit(); };
+
+                                // Show the seat selection form
+                                SeatSelectionForm.Show();
+
+                                Hide(); // Hide the current form
+                            }
+
+                            else
+                            {
+                                MessageBox.Show("No matching bus found for the selected options.");
+                            }
+                        }
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("There was an error retrieving the bus data!");
+                }
             }
         }
     }

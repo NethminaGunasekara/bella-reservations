@@ -35,7 +35,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.ConfirmReservationButton = new System.Windows.Forms.Button();
+            this.ConfirmReservation = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -154,7 +154,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel5.Controls.Add(this.ConfirmReservationButton, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.ConfirmReservation, 1, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(94, 0);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
@@ -166,21 +166,21 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(753, 88);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
-            // ConfirmReservationButton
+            // ConfirmReservation
             // 
-            this.ConfirmReservationButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ConfirmReservationButton.BackColor = System.Drawing.Color.Navy;
-            this.ConfirmReservationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ConfirmReservationButton.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmReservationButton.ForeColor = System.Drawing.Color.White;
-            this.ConfirmReservationButton.Location = new System.Drawing.Point(323, 24);
-            this.ConfirmReservationButton.Margin = new System.Windows.Forms.Padding(22, 16, 22, 16);
-            this.ConfirmReservationButton.Name = "ConfirmReservationButton";
-            this.ConfirmReservationButton.Size = new System.Drawing.Size(105, 37);
-            this.ConfirmReservationButton.TabIndex = 2;
-            this.ConfirmReservationButton.Text = "Confirm";
-            this.ConfirmReservationButton.UseVisualStyleBackColor = false;
-            this.ConfirmReservationButton.Click += new System.EventHandler(this.ConfirmReservationButton_Click);
+            this.ConfirmReservation.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ConfirmReservation.BackColor = System.Drawing.Color.Navy;
+            this.ConfirmReservation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ConfirmReservation.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmReservation.ForeColor = System.Drawing.Color.White;
+            this.ConfirmReservation.Location = new System.Drawing.Point(323, 24);
+            this.ConfirmReservation.Margin = new System.Windows.Forms.Padding(22, 16, 22, 16);
+            this.ConfirmReservation.Name = "ConfirmReservation";
+            this.ConfirmReservation.Size = new System.Drawing.Size(105, 37);
+            this.ConfirmReservation.TabIndex = 2;
+            this.ConfirmReservation.Text = "Confirm";
+            this.ConfirmReservation.UseVisualStyleBackColor = false;
+            this.ConfirmReservation.Click += new System.EventHandler(this.ConfirmReservationButton_Click);
             // 
             // label2
             // 
@@ -419,7 +419,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "bus";
-            this.Text = "main_bus";
+            this.Text = "Bus Reservation - Bella Reservations";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -445,7 +445,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Button ConfirmReservationButton;
+        private System.Windows.Forms.Button ConfirmReservation;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;

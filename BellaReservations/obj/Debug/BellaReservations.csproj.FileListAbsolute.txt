@@ -101,7 +101,6 @@ C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.bus.resources
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.train.resources
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.profile.resources
-C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.Form4.resources
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.Properties.Resources.resources
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.register.resources
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.seat_boat1.resources
@@ -114,3 +113,4 @@ C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.pdb
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.plane.resources
 C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.selection.resources
+C:\Users\Nethm\OneDrive\Documents\BellaReservations\BellaReservations\obj\Debug\BellaReservations.receipt.resources

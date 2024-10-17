@@ -1,32 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Nethm\\OneDrive\\Documents\\BellaReservations\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B792752C-EA98-422D-9335-923437944C71}|BellaReservations\\BellaReservations.csproj|c:\\users\\nethm\\onedrive\\documents\\bellareservations\\bellareservations\\reservation\\bus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B792752C-EA98-422D-9335-923437944C71}|BellaReservations\\BellaReservations.csproj|solutionrelative:bellareservations\\reservation\\bus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B792752C-EA98-422D-9335-923437944C71}|BellaReservations\\BellaReservations.csproj|c:\\users\\nethm\\onedrive\\documents\\bellareservations\\bellareservations\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B792752C-EA98-422D-9335-923437944C71}|BellaReservations\\BellaReservations.csproj|solutionrelative:bellareservations\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B792752C-EA98-422D-9335-923437944C71}|BellaReservations\\BellaReservations.csproj|c:\\users\\nethm\\onedrive\\documents\\bellareservations\\bellareservations\\access\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B792752C-EA98-422D-9335-923437944C71}|BellaReservations\\BellaReservations.csproj|solutionrelative:bellareservations\\access\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B792752C-EA98-422D-9335-923437944C71}|BellaReservations\\BellaReservations.csproj|c:\\users\\nethm\\onedrive\\documents\\bellareservations\\bellareservations\\reservation\\bus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B792752C-EA98-422D-9335-923437944C71}|BellaReservations\\BellaReservations.csproj|solutionrelative:bellareservations\\reservation\\bus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B792752C-EA98-422D-9335-923437944C71}|BellaReservations\\BellaReservations.csproj|c:\\users\\nethm\\onedrive\\documents\\bellareservations\\bellareservations\\selection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B792752C-EA98-422D-9335-923437944C71}|BellaReservations\\BellaReservations.csproj|solutionrelative:bellareservations\\selection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B792752C-EA98-422D-9335-923437944C71}|BellaReservations\\BellaReservations.csproj|c:\\users\\nethm\\onedrive\\documents\\bellareservations\\bellareservations\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B792752C-EA98-422D-9335-923437944C71}|BellaReservations\\BellaReservations.csproj|solutionrelative:bellareservations\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,89 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "login.cs",
-              "DocumentMoniker": "C:\\Users\\Nethm\\OneDrive\\Documents\\BellaReservations\\BellaReservations\\Access\\login.cs",
-              "RelativeDocumentMoniker": "BellaReservations\\Access\\login.cs",
-              "ToolTip": "C:\\Users\\Nethm\\OneDrive\\Documents\\BellaReservations\\BellaReservations\\Access\\login.cs",
-              "RelativeToolTip": "BellaReservations\\Access\\login.cs",
-              "ViewState": "AgIAAKMAAAAAAAAAAAAYwKIAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T19:09:19.09Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Nethm\\OneDrive\\Documents\\BellaReservations\\BellaReservations\\Program.cs",
-              "RelativeDocumentMoniker": "BellaReservations\\Program.cs",
-              "ToolTip": "C:\\Users\\Nethm\\OneDrive\\Documents\\BellaReservations\\BellaReservations\\Program.cs",
-              "RelativeToolTip": "BellaReservations\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T20:46:45.193Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "bus.cs",
-              "DocumentMoniker": "C:\\Users\\Nethm\\OneDrive\\Documents\\BellaReservations\\BellaReservations\\Reservation\\bus.cs",
-              "RelativeDocumentMoniker": "BellaReservations\\Reservation\\bus.cs",
-              "ToolTip": "C:\\Users\\Nethm\\OneDrive\\Documents\\BellaReservations\\BellaReservations\\Reservation\\bus.cs",
-              "RelativeToolTip": "BellaReservations\\Reservation\\bus.cs",
-              "ViewState": "AgIAAA8BAAAAAAAAAAAQwBgBAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T20:30:03.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "bus.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Nethm\\OneDrive\\Documents\\BellaReservations\\BellaReservations\\Reservation\\bus.cs",
-              "RelativeDocumentMoniker": "BellaReservations\\Reservation\\bus.cs",
-              "ToolTip": "C:\\Users\\Nethm\\OneDrive\\Documents\\BellaReservations\\BellaReservations\\Reservation\\bus.cs [Design]",
-              "RelativeToolTip": "BellaReservations\\Reservation\\bus.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T20:25:08.969Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "selection.cs",
-              "DocumentMoniker": "C:\\Users\\Nethm\\OneDrive\\Documents\\BellaReservations\\BellaReservations\\selection.cs",
-              "RelativeDocumentMoniker": "BellaReservations\\selection.cs",
-              "ToolTip": "C:\\Users\\Nethm\\OneDrive\\Documents\\BellaReservations\\BellaReservations\\selection.cs",
-              "RelativeToolTip": "BellaReservations\\selection.cs",
-              "ViewState": "AgIAALEAAAAAAAAAAAAAALkAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T19:15:34.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "main.cs",
-              "DocumentMoniker": "C:\\Users\\Nethm\\OneDrive\\Documents\\BellaReservations\\BellaReservations\\main.cs",
-              "RelativeDocumentMoniker": "BellaReservations\\main.cs",
-              "ToolTip": "C:\\Users\\Nethm\\OneDrive\\Documents\\BellaReservations\\BellaReservations\\main.cs",
-              "RelativeToolTip": "BellaReservations\\main.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAwwCYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T19:00:29.686Z",
-              "EditorCaption": ""
             }
           ]
         }
