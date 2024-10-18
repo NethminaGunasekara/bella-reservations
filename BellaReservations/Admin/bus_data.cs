@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -145,6 +146,302 @@ namespace BellaReservations
             PreviousForm.Show();
             PreviousForm.FormClosing += delegate { Application.Exit(); };
             this.Hide();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InsertButton_Click(object sender, EventArgs e)
+        {
+            DateTime date;
+            DateTime time;
+            double price;
+
+            try
+            {
+                date = DateTime.Parse(reservation_date.Text);
+                time = DateTime.Parse(reservation_time.Text);
+
+                // Try to parse the price into a double value
+                price = Double.Parse(textBox_price.Text);
+            } 
+
+            // Handle any errors during retrieving and parsing the inputs
+            catch (Exception)
+            {
+                MessageBox.Show("Error inserting data! Please check your inputs.");
+
+                return; // Prevent the next code from executing when an error has occured
+            }
+
+            // If all inputs are provided
+            if(textBox_from.Text.Length >= 1 && textBox_to.Text.Length >=1)
+            {
+                // Query to insert all values into bus_data table
+                string query = @"INSERT INTO bus_data (departing_station, destination_station, date, time, price) 
+                                    VALUES (@From, @To, @Date, @Time, @Price)";
+
+                try
+                {
+                    using (SqlConnection conn = new SqlConnection(main.ConnectionString))
+                    {
+                        conn.Open();
+
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            // Set the parameter values
+                            cmd.Parameters.AddWithValue("@From", textBox_from.Text);
+                            cmd.Parameters.AddWithValue("@To", textBox_to.Text);
+                            cmd.Parameters.AddWithValue("@Date", date.Date);
+                            cmd.Parameters.AddWithValue("@Time", time);
+                            cmd.Parameters.AddWithValue("@Price", price);
+
+                            // Execute the query
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                }
+
+                // If there's an error, display an error message
+                catch (Exception)
+                {
+                    MessageBox.Show("An error has occurred while saving data.");
+                }
+            }
+        }
+
+        private void RemoveButton_Click(object sender, EventArgs e)
+        {
+            DateTime date;
+            DateTime time;
+            double price;
+
+            try
+            {
+                // Parse inputs into appropriate types
+                date = DateTime.Parse(reservation_date.Text);
+                time = DateTime.Parse(reservation_time.Text);
+                price = Double.Parse(textBox_price.Text);
+            }
+
+            // If there's an error while parsing input data, display an error message
+            catch (Exception)
+            {
+                MessageBox.Show("Error processing data! Please check your inputs.");
+                return; // Prevent the next code from executing when an error has occured
+            }
+
+            // Check if from and to stations have been provided
+            if (textBox_from.Text.Length >= 1 && textBox_to.Text.Length >= 1)
+            {
+                // SQL query to delete the first matching row from bus_data
+                string query = @"DELETE TOP (1) FROM bus_data 
+                                WHERE departing_station = @From 
+                                AND destination_station = @To 
+                                AND date = @Date 
+                                AND time = @Time 
+                                AND price = @Price";
+
+                using (SqlConnection conn = new SqlConnection(main.ConnectionString))
+                {
+                    try
+                    {
+                        conn.Open();
+
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            // Assign values to the parameters
+                            cmd.Parameters.AddWithValue("@From", textBox_from.Text);
+                            cmd.Parameters.AddWithValue("@To", textBox_to.Text);
+                            cmd.Parameters.AddWithValue("@Date", date.Date);
+                            cmd.Parameters.AddWithValue("@Time", time.TimeOfDay);
+                            cmd.Parameters.AddWithValue("@Price", price);
+
+                            // Execute the DELETE query
+                            int rowsAffected = cmd.ExecuteNonQuery();
+
+                            // Notify the user if no rows were affected
+                            if (rowsAffected == 0)
+                            {
+                                MessageBox.Show("No matching reservation found.");
+                            }
+
+                            else
+                            {
+                                MessageBox.Show("Reservation deleted successfully.");
+                            }
+                        }
+                    }
+
+                    // If there's an error, display an error message
+                    catch (Exception)
+                    {
+                        MessageBox.Show("An error has occurred while deleting the record.");
+                    }
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("Please fill in both the 'From' and 'To' stations.");
+            }
+        }
+
+        private void UpdatePrice_Click(object sender, EventArgs e)
+        {
+            DateTime date;
+            DateTime time;
+            double price;
+
+            try
+            {
+                // Parse date, time, and price inputs
+                date = DateTime.Parse(reservation_date.Text);
+                time = DateTime.Parse(reservation_time.Text);
+                price = Double.Parse(textBox_price.Text);
+            }
+
+            catch (Exception)
+            {
+                MessageBox.Show("Error processing data! Please check your inputs.");
+
+                return; // Prevent the next code from executing if inputs are invalid
+            }
+
+            // Ensure that 'From' and 'To' stations are not empty
+            if (textBox_from.Text.Length >= 1 && textBox_to.Text.Length >= 1)
+            {
+                // SQL query to update the price where all other details match
+                string query = @"UPDATE bus_data 
+                                SET price = @Price 
+                                WHERE departing_station = @From 
+                                AND destination_station = @To 
+                                AND date = @Date 
+                                AND time = @Time";
+
+                using (SqlConnection conn = new SqlConnection(main.ConnectionString))
+                {
+                    try
+                    {
+                        conn.Open();
+
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            // Assign values to the parameters
+                            cmd.Parameters.AddWithValue("@From", textBox_from.Text);
+                            cmd.Parameters.AddWithValue("@To", textBox_to.Text);
+                            cmd.Parameters.AddWithValue("@Date", date.Date);
+                            cmd.Parameters.AddWithValue("@Time", time.TimeOfDay);
+                            cmd.Parameters.AddWithValue("@Price", price);
+
+                            // Execute the UPDATE query
+                            int rowsAffected = cmd.ExecuteNonQuery();
+
+                            // Notify the user about the result
+                            if (rowsAffected == 0)
+                            {
+                                MessageBox.Show("No matching reservation found to update.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Price updated successfully.");
+                            }
+                        }
+                    }
+
+                    // If there's an error, display an error message
+                    catch (Exception)
+                    {
+                        MessageBox.Show("An error has occurred while updating the record.");
+                    }
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("Please fill in both the 'From' and 'To' stations.");
+            }
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            DateTime date;
+            DateTime time;
+
+            try
+            {
+                // Parse date and time inputs
+                date = DateTime.Parse(reservation_date.Text);
+                time = DateTime.Parse(reservation_time.Text);
+            }
+            catch (Exception)
+            {
+                // Handle input parsing errors
+                MessageBox.Show("Error processing data! Please check your inputs.");
+
+                return; // Prevent the next code from executing if inputs are invalid
+            }
+
+            // Check if both 'From' and 'To' stations are provided
+            if (textBox_from.Text.Length >= 1 && textBox_to.Text.Length >= 1)
+            {
+                // SQL query to search for a matching bus record (ignoring price)
+                string query = @"SELECT price 
+                                FROM bus_data 
+                                WHERE departing_station = @From 
+                                AND destination_station = @To 
+                                AND date = @Date 
+                                AND time = @Time";
+
+                using (SqlConnection conn = new SqlConnection(main.ConnectionString))
+                {
+                    try
+                    {
+                        conn.Open();
+
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            // Assign values to the parameters
+                            cmd.Parameters.AddWithValue("@From", textBox_from.Text);
+                            cmd.Parameters.AddWithValue("@To", textBox_to.Text);
+                            cmd.Parameters.AddWithValue("@Date", date.Date);
+                            cmd.Parameters.AddWithValue("@Time", time.TimeOfDay);
+
+                            // Execute the query and read the result
+                            using (SqlDataReader reader = cmd.ExecuteReader())
+                            {
+                                // If a record is found
+                                if (reader.Read())
+                                {
+                                    // Retrieve the price
+                                    decimal price = reader.GetDecimal(0);
+
+                                    // Display the price
+                                    MessageBox.Show($"Record found! Price: LKR {price}");
+                                }
+
+                                // If no record matches the search criteria
+                                else
+                                {
+                                    MessageBox.Show("No matching bus record found.");
+                                }
+                            }
+                        }
+                    }
+
+                    // If there's an error, display an error message
+                    catch (Exception)
+                    {
+                        MessageBox.Show("An error has occurred while searching for the record.");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill in both the 'From' and 'To' stations.");
+            }
         }
     }
 }

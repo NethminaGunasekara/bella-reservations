@@ -43,24 +43,24 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox_from = new System.Windows.Forms.TextBox();
+            this.textBox_to = new System.Windows.Forms.TextBox();
+            this.reservation_date = new System.Windows.Forms.DateTimePicker();
+            this.reservation_time = new System.Windows.Forms.DateTimePicker();
             this.panel4 = new System.Windows.Forms.Panel();
             this.PreviousFormButton = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox_price = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.SearchButton = new System.Windows.Forms.Button();
+            this.InsertButton = new System.Windows.Forms.Button();
+            this.RemoveButton = new System.Windows.Forms.Button();
+            this.UpdatePrice = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -217,10 +217,10 @@
             this.tableLayoutPanel3.Controls.Add(this.label5, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.label6, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.label9, 4, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox1, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox2, 3, 1);
-            this.tableLayoutPanel3.Controls.Add(this.textBox3, 3, 2);
-            this.tableLayoutPanel3.Controls.Add(this.textBox4, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.textBox_from, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.textBox_to, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.reservation_date, 3, 1);
+            this.tableLayoutPanel3.Controls.Add(this.reservation_time, 3, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
@@ -303,49 +303,50 @@
             this.label9.Text = "To";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox1
+            // textBox_from
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.BackColor = System.Drawing.Color.Black;
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(300, 8);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 20);
-            this.textBox1.TabIndex = 9;
+            this.textBox_from.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_from.BackColor = System.Drawing.Color.Black;
+            this.textBox_from.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox_from.ForeColor = System.Drawing.Color.White;
+            this.textBox_from.Location = new System.Drawing.Point(300, 6);
+            this.textBox_from.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox_from.Name = "textBox_from";
+            this.textBox_from.Size = new System.Drawing.Size(150, 23);
+            this.textBox_from.TabIndex = 9;
+            this.textBox_from.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // textBox_to
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.BackColor = System.Drawing.Color.Black;
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(300, 44);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 20);
-            this.textBox2.TabIndex = 10;
+            this.textBox_to.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_to.BackColor = System.Drawing.Color.Black;
+            this.textBox_to.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox_to.ForeColor = System.Drawing.Color.White;
+            this.textBox_to.Location = new System.Drawing.Point(525, 6);
+            this.textBox_to.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox_to.Name = "textBox_to";
+            this.textBox_to.Size = new System.Drawing.Size(150, 23);
+            this.textBox_to.TabIndex = 12;
             // 
-            // textBox3
+            // reservation_date
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.BackColor = System.Drawing.Color.Black;
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(300, 81);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 20);
-            this.textBox3.TabIndex = 11;
+            this.reservation_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.reservation_date.Location = new System.Drawing.Point(300, 44);
+            this.reservation_date.Margin = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.reservation_date.Name = "reservation_date";
+            this.reservation_date.Size = new System.Drawing.Size(150, 23);
+            this.reservation_date.TabIndex = 13;
             // 
-            // textBox4
+            // reservation_time
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.BackColor = System.Drawing.Color.Black;
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(525, 8);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(150, 20);
-            this.textBox4.TabIndex = 12;
+            this.reservation_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.reservation_time.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.reservation_time.Location = new System.Drawing.Point(300, 80);
+            this.reservation_time.Margin = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.reservation_time.Name = "reservation_time";
+            this.reservation_time.Size = new System.Drawing.Size(150, 23);
+            this.reservation_time.TabIndex = 14;
+            this.reservation_time.Value = new System.DateTime(2024, 10, 18, 20, 16, 0, 0);
             // 
             // panel4
             // 
@@ -412,7 +413,7 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel7.Controls.Add(this.label12, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.textBox8, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.textBox_price, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.label13, 0, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(172, 2);
@@ -421,6 +422,7 @@
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(601, 110);
             this.tableLayoutPanel7.TabIndex = 15;
             this.tableLayoutPanel7.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel7_Paint);
@@ -439,17 +441,18 @@
             this.label12.Text = "Configurations:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox8
+            // textBox_price
             // 
-            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox8.BackColor = System.Drawing.Color.Black;
-            this.textBox8.ForeColor = System.Drawing.Color.White;
-            this.textBox8.Location = new System.Drawing.Point(225, 45);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox8.Name = "textBox8";
-            this.tableLayoutPanel7.SetRowSpan(this.textBox8, 2);
-            this.textBox8.Size = new System.Drawing.Size(150, 20);
-            this.textBox8.TabIndex = 17;
+            this.textBox_price.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox_price.BackColor = System.Drawing.Color.Black;
+            this.textBox_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox_price.ForeColor = System.Drawing.Color.White;
+            this.textBox_price.Location = new System.Drawing.Point(225, 43);
+            this.textBox_price.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox_price.Name = "textBox_price";
+            this.tableLayoutPanel7.SetRowSpan(this.textBox_price, 2);
+            this.textBox_price.Size = new System.Drawing.Size(150, 23);
+            this.textBox_price.TabIndex = 17;
             // 
             // label13
             // 
@@ -493,10 +496,10 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel6.Controls.Add(this.button13, 4, 1);
-            this.tableLayoutPanel6.Controls.Add(this.button1, 1, 1);
-            this.tableLayoutPanel6.Controls.Add(this.button3, 2, 1);
-            this.tableLayoutPanel6.Controls.Add(this.button4, 3, 1);
+            this.tableLayoutPanel6.Controls.Add(this.SearchButton, 4, 1);
+            this.tableLayoutPanel6.Controls.Add(this.InsertButton, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.RemoveButton, 2, 1);
+            this.tableLayoutPanel6.Controls.Add(this.UpdatePrice, 3, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(94, 0);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
@@ -508,65 +511,69 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(753, 110);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
-            // button13
+            // SearchButton
             // 
-            this.button13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button13.BackColor = System.Drawing.Color.Navy;
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button13.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(563, 36);
-            this.button13.Margin = new System.Windows.Forms.Padding(38, 24, 38, 24);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(74, 38);
-            this.button13.TabIndex = 10;
-            this.button13.Text = "Search";
-            this.button13.UseVisualStyleBackColor = false;
+            this.SearchButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SearchButton.BackColor = System.Drawing.Color.Navy;
+            this.SearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SearchButton.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchButton.ForeColor = System.Drawing.Color.White;
+            this.SearchButton.Location = new System.Drawing.Point(563, 36);
+            this.SearchButton.Margin = new System.Windows.Forms.Padding(38, 24, 38, 24);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(74, 38);
+            this.SearchButton.TabIndex = 10;
+            this.SearchButton.Text = "Search";
+            this.SearchButton.UseVisualStyleBackColor = false;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
-            // button1
+            // InsertButton
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.Navy;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(113, 36);
-            this.button1.Margin = new System.Windows.Forms.Padding(38, 24, 38, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 38);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Insert";
-            this.button1.UseVisualStyleBackColor = false;
+            this.InsertButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.InsertButton.BackColor = System.Drawing.Color.Navy;
+            this.InsertButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InsertButton.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InsertButton.ForeColor = System.Drawing.Color.White;
+            this.InsertButton.Location = new System.Drawing.Point(113, 36);
+            this.InsertButton.Margin = new System.Windows.Forms.Padding(38, 24, 38, 24);
+            this.InsertButton.Name = "InsertButton";
+            this.InsertButton.Size = new System.Drawing.Size(74, 38);
+            this.InsertButton.TabIndex = 0;
+            this.InsertButton.Text = "Insert";
+            this.InsertButton.UseVisualStyleBackColor = false;
+            this.InsertButton.Click += new System.EventHandler(this.InsertButton_Click);
             // 
-            // button3
+            // RemoveButton
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.Navy;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(263, 36);
-            this.button3.Margin = new System.Windows.Forms.Padding(38, 24, 38, 24);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(74, 38);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Remove";
-            this.button3.UseVisualStyleBackColor = false;
+            this.RemoveButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RemoveButton.BackColor = System.Drawing.Color.Navy;
+            this.RemoveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RemoveButton.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveButton.ForeColor = System.Drawing.Color.White;
+            this.RemoveButton.Location = new System.Drawing.Point(263, 36);
+            this.RemoveButton.Margin = new System.Windows.Forms.Padding(38, 24, 38, 24);
+            this.RemoveButton.Name = "RemoveButton";
+            this.RemoveButton.Size = new System.Drawing.Size(74, 38);
+            this.RemoveButton.TabIndex = 1;
+            this.RemoveButton.Text = "Remove";
+            this.RemoveButton.UseVisualStyleBackColor = false;
+            this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
             // 
-            // button4
+            // UpdatePrice
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.BackColor = System.Drawing.Color.Navy;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(413, 36);
-            this.button4.Margin = new System.Windows.Forms.Padding(38, 24, 38, 24);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(74, 38);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Update";
-            this.button4.UseVisualStyleBackColor = false;
+            this.UpdatePrice.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.UpdatePrice.BackColor = System.Drawing.Color.Navy;
+            this.UpdatePrice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.UpdatePrice.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdatePrice.ForeColor = System.Drawing.Color.White;
+            this.UpdatePrice.Location = new System.Drawing.Point(395, 36);
+            this.UpdatePrice.Margin = new System.Windows.Forms.Padding(20, 22, 20, 22);
+            this.UpdatePrice.Name = "UpdatePrice";
+            this.UpdatePrice.Size = new System.Drawing.Size(110, 38);
+            this.UpdatePrice.TabIndex = 2;
+            this.UpdatePrice.Text = "Update Price";
+            this.UpdatePrice.UseVisualStyleBackColor = false;
+            this.UpdatePrice.Click += new System.EventHandler(this.UpdatePrice_Click);
             // 
             // bus_data
             // 
@@ -614,23 +621,23 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox_from;
+        private System.Windows.Forms.TextBox textBox_to;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button PreviousFormButton;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button InsertButton;
+        private System.Windows.Forms.Button RemoveButton;
+        private System.Windows.Forms.Button UpdatePrice;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox_price;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button SearchButton;
+        private System.Windows.Forms.DateTimePicker reservation_date;
+        private System.Windows.Forms.DateTimePicker reservation_time;
     }
 }
